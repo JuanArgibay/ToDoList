@@ -1,0 +1,50 @@
+[ 
+    {
+        "category": {
+            "id": 0,
+            "name": "Work",
+            "icon": "👷",
+            "color": "#E1C516",
+            "tasks": {
+                "id": 0,
+                "title": "Fixed bug errors",
+                "description": "Fix like and comment counter",
+                "hour": "11:00",
+                "date": "23/05/23",
+                "completed": false
+            }
+        }
+    },
+    {
+        "category": {
+            "id": 1,
+            "name": "Home",
+            "icon": "🏠",
+            "color": "#1666E1",
+            "tasks": {
+                "id":0,
+                "title": "Cook for the family",
+                "description": "Chicken with fried potatoes",
+                "hour": "22:00",
+                "date": "23/05/23",
+                "completed": false
+            }
+        }
+    },
+    {
+        "category": {
+            "id": 2,
+            "name": "Healthy",
+            "icon": "💗",
+            "color": "#F05D75",
+            "tasks": {
+                "id":0,
+                "title": "Runnin away",
+                "description": "Run almost 10km",
+                "hour": "11:00",
+                "date": "23/05/23",
+                "completed": false
+            }
+        }
+    }
+]

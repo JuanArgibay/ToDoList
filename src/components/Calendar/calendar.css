@@ -1,0 +1,44 @@
+.react-calendar__month-view__weekdays__weekday,
+.react-calendar__month-view__days__day {
+    max-width: calc(100% / 6) !important;
+    flex-basis: calc(100% / 6) !important;
+}
+
+.react-calendar__month-view__weekdays__weekday:nth-child(7n),
+.react-calendar__month-view__days__day:nth-child(7n) {
+    display: none;
+}
+
+.dM {
+    display: flex;
+    align-items: center;
+}
+
+.calendar {
+    margin: auto;
+    max-width: 90vw;
+}
+
+._3n {
+    background-color: rgb(157, 226, 247);
+    width: 3.2rem;
+}
+
+/*Color */
+._3n,
+._2E {
+    color: black !important;
+}
+
+.Lx {
+    color: rgb(58, 57, 57) !important;
+}
+
+.Ez {
+    background-color: transparent !important;
+}
+
+.WP::after,
+.Ez::after {
+    background: transparent !important;
+}

@@ -1,0 +1,13 @@
+.addTask {
+    align-self: center;
+    justify-self: center;
+}
+
+.addTask svg {
+    margin: 1.5rem;
+    height: 4rem;
+}
+
+.homeMain {
+    min-height: 80vh;
+}

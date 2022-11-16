@@ -1,0 +1,19 @@
+menu nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: auto;
+    max-width: 90vh;
+    overflow-x: scroll;
+}
+
+menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 1rem 1rem;
+}
+
+menu svg {
+    margin-right: 2rem;
+    height: 1.5rem;
+}

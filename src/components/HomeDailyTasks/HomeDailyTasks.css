@@ -1,0 +1,32 @@
+.homeDailyTasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeDailyTasks article {
+    min-width: 90%;
+    padding: 1rem;
+}
+
+.homeDailyTasks article ul {
+    list-style: none;
+}
+
+.listToDo,
+.listDid {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.listToDo div,
+.listDid div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.homeDailyTasks h3 {
+    margin: 0.5rem;
+}

@@ -12,11 +12,14 @@
 .dM {
     display: flex;
     align-items: center;
+    padding: 0px !important;
+
 }
 
 .calendar {
-    margin: auto;
     max-width: 90vw;
+    margin: auto;
+
 }
 
 ._3n {

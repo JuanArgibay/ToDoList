@@ -1,19 +1,36 @@
-menu nav ul {
+menu .navCategories ul {
     display: flex;
     list-style: none;
     gap: 1rem;
     margin: auto;
     max-width: 90vh;
-    overflow-x: scroll;
+    overflow: scroll;
+}
+
+menu .navCategories ul li,
+menu svg {
+    margin-bottom: 0.5rem;
+}
+
+menu .navCategories ul li {
+    border: 0.1px solid black;
+    border-radius: 5px;
+    padding: 0.1rem 0.2rem 0.1rem;
 }
 
 menu {
     display: flex;
-    justify-content: space-between;
-    margin: 0 1rem 1rem 1rem;
+    justify-content: flex-end;
+    margin: 1rem;
+    gap: 1rem;
 }
 
 menu svg {
     margin-right: 2rem;
     height: 1.5rem;
+    justify-self: flex-end;
+}
+
+menu .navCategories {
+    max-width: 65vw;
 }

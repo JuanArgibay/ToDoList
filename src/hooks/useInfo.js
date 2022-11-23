@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import { getData } from '../services';
 
 export const useInfo = () => {
-    const [ totalInfo, setTotalInfo ] = useState();
+    const [ totalInfo, setTotalInfo ] = useState([]);
 
     useEffect(() => {
         const getTotalInfo = async () => {

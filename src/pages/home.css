@@ -4,10 +4,20 @@
 }
 
 .addTask svg {
-    margin: 1.5rem;
     height: 4rem;
 }
 
 .homeMain {
     min-height: 80vh;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.home h1 {
+    margin-left: 1rem;
 }

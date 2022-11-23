@@ -1,4 +1,4 @@
-import { AddNewTaskicon } from "../../resourcess/AddNewTaskicon"
+import { AddNewTaskicon } from "../../ressources/AddNewTaskicon"
 import './AddNewTask.css'
 
 export const AddNewTask = () => {

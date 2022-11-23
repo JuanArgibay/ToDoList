@@ -15,7 +15,7 @@ export const HomeDailyTasks = () => {
                             <p>16:30</p>
                         </li>
                     </ul>
-                    <h3>Completadas</h3>
+                    <h3>Completed</h3>
                     <ul>
                         <li className="listDid">
                             <div>

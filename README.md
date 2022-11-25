@@ -2,4 +2,9 @@
 
 - Created with React technology
 
+## Dependences:
+
+- Reactstrap
+- Bootstrap
+
 - In progress...

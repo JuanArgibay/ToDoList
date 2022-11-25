@@ -1,10 +1,10 @@
 import { CounterDaily } from "../CounterDaily/CounterDaily"
 import './HomeDailyTasks.css'
 
-export const HomeDailyTasks = () => {
+export const HomeDailyTasks = ({date}) => {
   return (
             <section className="homeDailyTasks">
-                <CounterDaily/>
+                <CounterDaily date={date}/>
                 <article>
                     <ul>
                         <li className="listToDo">

@@ -4,9 +4,14 @@ import { MenuNavCategories } from "../components/MenuNavCategories/MenuNavCatego
 import { AddNewTask } from "../components/AddNewTask/AddNewTask";
 import './home.css'
 import { DarkMode } from "../components/DarkMode/DarkMode";
+import { useState } from "react";
 
 
 export const Home = () => {
+
+    const [date, setDate] = useState(new Date());
+      console.log(date);
+
   return (
         <>
             <header className="home">
@@ -14,9 +19,9 @@ export const Home = () => {
                 <DarkMode></DarkMode>
             </header>
             <main className="homeMain">
-                <Calendar/>
+                <Calendar date={date} setDate={setDate}/>
                 <MenuNavCategories/>
-                <HomeDailyTasks></HomeDailyTasks>
+                <HomeDailyTasks date={date}></HomeDailyTasks>
             </main>
             <AddNewTask/>
         </>

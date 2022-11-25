@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import { AccordionList } from "../components/Accordion/AccordionList";
+import { DarkMode } from "../components/DarkMode/DarkMode";
 import { useInfo } from "../hooks/useInfo";
+import { HomeIcon } from "../ressources/HomeIcon";
 import './category.css'
 
 export const Category = () => {
@@ -8,35 +11,45 @@ export const Category = () => {
     const { id: idCategory } = useParams();
     const [category, setCategory] = useState({});
     const {totalInfo} = useInfo();
+    const [tasks, setTasks] = useState([]);
     
-
     useEffect(()=> {
-        setCategory({});
-        console.log(totalInfo);
         if(totalInfo.length > 0) {
-            setCategory (totalInfo.filter(info => info.category.id === parseInt(idCategory)));
+            const [data] = (totalInfo.filter(info => info.category.id === parseInt(idCategory)));
+             if (data) {
+                const {category} = data;
+                const {tasks} = category;
+                setCategory(category);
+                setTasks(tasks);
+             }
         }
     }, [idCategory, totalInfo]);
 
-    console.log(category);
-
     return (
     <>
-        { category.length > 0 ? (
-            <section>
-                <h1 
-                    style={{backgroundColor: category[0].category.color}}
-                    className='category-title'
+        { Object.entries(category).length !== 0 ? (
+            <>
+                <section
+                    style={{backgroundColor: category.color}}
+                    className="category-header"
                 >
-                    <div className='category-icon'>{category[0].category.icon}</div>
-                    {category[0].category.name}
-                </h1>
-                <ul>
-                    <li>
-                        <p></p>
-                    </li>
-                </ul>
-            </section>
+                    <div className="category-header-icons">
+                        <Link to='/' className="home-icon">
+                            <HomeIcon/>
+                        </Link>
+                        <DarkMode></DarkMode>
+                    </div>
+                    <div className='category-title'>
+                        <div className='category-icon'>
+                            {category.icon}
+                        </div>
+                        <h1>
+                            {category.name}
+                        </h1>
+                    </div>
+                </section>
+                <AccordionList className="category-tasks-list" tasks={tasks}/>         
+            </>
         ):( 
             <h2>Category not found</h2>
         )}

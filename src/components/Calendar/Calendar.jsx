@@ -1,19 +1,19 @@
 import './calendar.css'
-import {useState} from 'react';
 import { Datepicker } from "@meinefinsternis/react-horizontal-date-picker";
 import { enUS } from "date-fns/locale";
 
-export const Calendar = () => {
-  const [date, setDate] = useState(new Date())
-  
+export const Calendar = ({setDate}) => {
+
+ const handleChange = (e) => {
+  console.log(e);
+  setDate(e[0])
+ }
 
   return (
     <div className='calendar'>
       <Datepicker
-        onChange={(e) => setDate(e.target.value)}
+        onChange={handleChange}
         locale={enUS}
-        startValue={date.startValue}
-        endValue={date.endValue}
       />
     </div>
    

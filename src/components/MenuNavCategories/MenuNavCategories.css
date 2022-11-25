@@ -20,15 +20,12 @@ menu .navCategories ul li {
 
 menu {
     display: flex;
-    justify-content: flex-end;
-    margin: 1rem;
-    gap: 1rem;
+    justify-content: space-around;
+    margin: 2rem 1rem 1rem 1rem;
 }
 
 menu svg {
-    margin-right: 2rem;
     height: 1.5rem;
-    justify-self: flex-end;
 }
 
 menu .navCategories {

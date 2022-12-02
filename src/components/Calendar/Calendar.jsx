@@ -5,7 +5,6 @@ import { enUS } from "date-fns/locale";
 export const Calendar = ({setDate}) => {
 
  const handleChange = (e) => {
-  console.log(e);
   setDate(e[0])
  }
 

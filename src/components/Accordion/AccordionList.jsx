@@ -25,8 +25,8 @@ export const AccordionList =({tasks}, props) => {
         <AccordionItem>
           {tasks.map(task =>
           <li key={task.id}>
-            <AccordionHeader targetId={task.id}>{task.title}</AccordionHeader>
-            <AccordionBody accordionId={task.id}>
+            <AccordionHeader targetId={(task.id).toString()}>{task.title}</AccordionHeader>
+            <AccordionBody accordionId={(task.id).toString()}>
               <ul>
                 <li>{task.description}</li>
                 <li>{task.hour}</li>
@@ -42,7 +42,3 @@ export const AccordionList =({tasks}, props) => {
     </div>
   );
 } 
-
-
-
-

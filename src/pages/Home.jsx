@@ -10,7 +10,6 @@ import { useState } from "react";
 export const Home = () => {
 
     const [date, setDate] = useState(new Date());
-      console.log(date);
 
   return (
         <>

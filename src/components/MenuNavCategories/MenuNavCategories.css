@@ -31,3 +31,8 @@ menu svg {
 menu .navCategories {
     max-width: 65vw;
 }
+
+menu a {
+    text-decoration: none;
+    color: inherit;
+}

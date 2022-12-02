@@ -1,30 +1,61 @@
+import { useTasks } from "../../hooks/useTasks"
 import { CounterDaily } from "../CounterDaily/CounterDaily"
 import './HomeDailyTasks.css'
+import {takeDateTasks} from "../../helpers"
+import { useEffect, useState } from "react"
 
 export const HomeDailyTasks = ({date}) => {
+    const tasksArray = useTasks();
+    const [timesTamp, setTimesTamp] = useState ({
+                                        day: date.getDate(),
+                                        month: date.getMonth()+1,
+                                        year: date.getFullYear(),
+                                    });
+    const dailyTasks = takeDateTasks(tasksArray, timesTamp);
+    
+      useEffect(()=> {
+        setTimesTamp({
+          day: date.getDate(),
+          month: date.getMonth()+1,
+          year: date.getFullYear(),
+        })
+      }, [date])
+
+      console.log(dailyTasks);
   return (
             <section className="homeDailyTasks">
-                <CounterDaily date={date}/>
+                <CounterDaily dailyTasks={dailyTasks} timesTamp={timesTamp}/>
                 <article>
-                    <ul>
-                        <li className="listToDo">
-                            <div>
-                                <p>🏠</p>
-                                <p>Poner la lavadora</p>
-                            </div>
-                            <p>16:30</p>
-                        </li>
-                    </ul>
-                    <h3>Completed</h3>
-                    <ul>
-                        <li className="listDid">
-                            <div>
-                                <p>👷</p>
-                                <p>Entregar el proyecto</p>
-                            </div>
-                            <p>20:00</p>
-                        </li>
-                    </ul>
+                {dailyTasks? (
+                    <>
+                        <ul>  
+                            {dailyTasks.map(dailyTask => dailyTask.comp === "0" ? 
+                                (<li key={dailyTask.id} className="listToDo">
+                                    <div>
+                                        <p>🏠</p>
+                                        <p>{dailyTask.title}</p>
+                                    </div>
+                                    <p>{dailyTask.hour}</p>
+                                </li>
+                                ) : null      
+                            )}                    
+                        </ul>
+                        <h3>Completed</h3>
+                        <ul>  
+                            {dailyTasks.map(dailyTask => dailyTask.comp === "1" ? 
+                                (<li key={dailyTask.id} className="listToDo">
+                                    <div>
+                                        <p>🏠</p>
+                                        <p>{dailyTask.title}</p>
+                                    </div>
+                                    <p>{dailyTask.hour}</p>
+                                </li>
+                                ) : null      
+                            )}                    
+                        </ul>
+                    </>
+                     ) : null
+                    }
                 </article>
             </section>
   )

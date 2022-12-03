@@ -10,7 +10,7 @@
                 "title": "Fixed bug errors",
                 "description": "Fix like and comment counter",
                 "hour": "11:00",
-                "date": "02/12/2022",
+                "date": "03/12/2022",
                 "comp": "0"
             }]
         }
@@ -26,7 +26,7 @@
                 "title": "Cook for the family",
                 "description": "Chicken with fried potatoes",
                 "hour": "22:00",
-                "date": "02/12/2022",
+                "date": "03/12/2022",
                 "comp": "1"
         },
         {
@@ -34,8 +34,8 @@
             "title": "Weekend cooking",
             "description": "BBQ",
             "hour": "12:00",
-            "date": "02/12/2022",
-            "comp": "1"
+            "date": "03/12/2022",
+            "comp": "0"
     }]
         }
     },
@@ -50,7 +50,7 @@
                 "title": "Runnin away",
                 "description": "Run almost 10km",
                 "hour": "11:00",
-                "date": "02/12/2022",
+                "date": "03/12/2022",
                 "comp": "0"
             }]
         }
@@ -66,7 +66,7 @@
                 "title": "Cookies for Jhon",
                 "description": "Jhon needs 20 cookies for the school",
                 "hour": "12:00",
-                "date": "02/12/2022",
+                "date": "03/12/2022",
                 "comp": "1"
             }]
         }

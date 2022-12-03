@@ -4,21 +4,19 @@ import { getDaily } from "../services";
 
 export const useTasks = () => {
     
-    const [tasksArray, setTasksArray] = useState();
-console.log(tasksArray);
+    const [tasksArray, setTasksArray] = useState([]);
+
     useEffect(() => {
         const getTasks = async () => {
             const dataTask = await getDaily();
-
+            let completeTask = {};
             setTasksArray(dataTask.map(data => {
-                let completeTask = {};
                 completeTask = data.category.tasks;
-                completeTask.icon = data.category.icon;
+                completeTask.map(task => task.icon = data.category.icon);
                 return completeTask;
             }));
         }
         getTasks();
     }, [])
-
     return tasksArray;
 }

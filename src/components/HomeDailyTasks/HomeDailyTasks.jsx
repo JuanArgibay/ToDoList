@@ -20,8 +20,7 @@ export const HomeDailyTasks = ({date}) => {
           year: date.getFullYear(),
         })
       }, [date])
-
-      console.log(dailyTasks);
+     
   return (
             <section className="homeDailyTasks">
                 <CounterDaily dailyTasks={dailyTasks} timesTamp={timesTamp}/>
@@ -32,7 +31,7 @@ export const HomeDailyTasks = ({date}) => {
                             {dailyTasks.map(dailyTask => dailyTask.comp === "0" ? 
                                 (<li key={dailyTask.id} className="listToDo">
                                     <div>
-                                        <p>🏠</p>
+                                        <p>{dailyTask.icon}</p>
                                         <p>{dailyTask.title}</p>
                                     </div>
                                     <p>{dailyTask.hour}</p>
@@ -45,7 +44,7 @@ export const HomeDailyTasks = ({date}) => {
                             {dailyTasks.map(dailyTask => dailyTask.comp === "1" ? 
                                 (<li key={dailyTask.id} className="listToDo">
                                     <div>
-                                        <p>🏠</p>
+                                        <p>{dailyTask.icon}</p>
                                         <p>{dailyTask.title}</p>
                                     </div>
                                     <p>{dailyTask.hour}</p>

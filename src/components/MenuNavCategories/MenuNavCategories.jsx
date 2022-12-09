@@ -1,7 +1,7 @@
-import { AddIcon } from '../../ressources/AddIcon'
 import './MenuNavCategories.css'
 import {useInfo} from '../../hooks/useInfo'
 import { Link } from 'react-router-dom';
+import { PopUp } from '../Pop-up/Pop-up';
 
 
 
@@ -30,7 +30,7 @@ export const MenuNavCategories = () => {
                 )}
                 
             </nav>
-            <AddIcon></AddIcon>
+            <PopUp></PopUp>
         </menu>
   )
 }

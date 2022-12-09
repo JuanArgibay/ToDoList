@@ -1,0 +1,7 @@
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}

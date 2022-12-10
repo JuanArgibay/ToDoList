@@ -3,12 +3,7 @@ import {useInfo} from '../../hooks/useInfo'
 import { Link } from 'react-router-dom';
 import { PopUp } from '../Pop-up/Pop-up';
 
-
-
-
-
 export const MenuNavCategories = () => {
-
     const {totalInfo} = useInfo();
 
   return (

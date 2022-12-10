@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getDaily } from "../services";
+import { getData } from "../services";
 
 
 export const useTasks = () => {
@@ -8,7 +8,7 @@ export const useTasks = () => {
 
     useEffect(() => {
         const getTasks = async () => {
-            const dataTask = await getDaily();
+            const dataTask = await getData();
             let completeTask = {};
             setTasksArray(dataTask.map(data => {
                 completeTask = data.category.tasks;

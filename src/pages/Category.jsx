@@ -12,10 +12,11 @@ export const Category = () => {
     const [category, setCategory] = useState({});
     const {totalInfo} = useInfo();
     const [tasks, setTasks] = useState([]);
+    console.log(totalInfo);
     
     useEffect(()=> {
         if(totalInfo.length > 0) {
-            const [data] = (totalInfo.filter(info => info.category.id === parseInt(idCategory)));
+            const [data] = (totalInfo.filter(info => `${info.category.id}` === idCategory));
              if (data) {
                 const {category} = data;
                 const {tasks} = category;

@@ -1,24 +1,32 @@
 import './pop-up.css'
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { AddIcon } from '../../ressources/AddIcon';
+import { postCategory } from '../../services';
+import { v4 as uuidv4 } from 'uuid'
 
-export const PopUp = (args, task) => {
+export const PopUp = (args) => {
   const [modal, setModal] = useState(false);
   const icons = ['🌍','👩‍👩‍👦','💪','🏘️','🔖','🚖','📺','📼'];
   const [name, setName] = useState('');
   const [color, setColor] = useState('transparent');
   const [icon, setIcon] = useState(icons[0]);
  
-
   const toggle = () => setModal(!modal);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     toggle();
-    console.log(icon);
-    console.log(name);
-    console.log(color);
+    if (!name) return console.log('debes escribir almenos el nombre');
+    const category = {
+      "color": '#'+color,
+      "icon": icon,
+      "id": uuidv4(),
+      "name": name,
+      "tasks": [],
+    }
+    postCategory({category})
+   
   }
 
   return (
@@ -50,12 +58,8 @@ export const PopUp = (args, task) => {
               <Button color="secondary" onClick={() => toggle}>
                 Cancel
               </Button>
-          </form>
-          
+          </form>    
         </ModalBody>
-        <ModalFooter>
-         
-        </ModalFooter>
       </Modal>
     </div>
   );

@@ -1,7 +1,7 @@
 [ 
     {
         "category": {
-            "id": 0,
+            "id": "0",
             "name": "Work",
             "icon": "💼",
             "color": "#E1C516",
@@ -17,7 +17,7 @@
     },
     {
         "category": {
-            "id": 1,
+            "id": "1",
             "name": "Home",
             "icon": "🏠",
             "color": "#1696E1",
@@ -26,22 +26,22 @@
                 "title": "Cook for the family",
                 "description": "Chicken with fried potatoes",
                 "hour": "22:00",
-                "date": "09/12/2022",
+                "date": "10/12/2022",
                 "comp": "1"
         },
         {
-            "id":11,
+            "id":"11",
             "title": "Weekend cooking",
             "description": "BBQ",
             "hour": "12:00",
-            "date": "09/12/2022",
+            "date": "10/12/2022",
             "comp": "0"
     }]
         }
     },
     {
         "category": {
-            "id": 2,
+            "id": "2",
             "name": "Healthy",
             "icon": "💗",
             "color": "#F05D75",
@@ -57,7 +57,7 @@
     },
     {
         "category": {
-            "id": 3,
+            "id": "3",
             "name": "Cooking",
             "icon": "👨‍🍳",
             "color": "#1faD75",
@@ -66,7 +66,7 @@
                 "title": "Cookies for Jhon",
                 "description": "Jhon needs 20 cookies for the school",
                 "hour": "12:00",
-                "date": "09/12/2022",
+                "date": "10/12/2022",
                 "comp": "1"
             }]
         }

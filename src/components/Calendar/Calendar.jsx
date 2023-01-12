@@ -1,12 +1,13 @@
 import './calendar.css'
 import { Datepicker } from "@meinefinsternis/react-horizontal-date-picker";
 import { enUS } from "date-fns/locale";
+import React from "react";
 
-export const Calendar = ({setDate}) => {
+export const Calendar = ({ setDate }) => {
 
- const handleChange = (e) => {
-  setDate(e[0])
- }
+  const handleChange = (e) => {
+    setDate(e[0])
+  }
 
   return (
     <div className='calendar'>
@@ -15,6 +16,6 @@ export const Calendar = ({setDate}) => {
         locale={enUS}
       />
     </div>
-   
+
   );
 };

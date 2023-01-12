@@ -1,8 +1,8 @@
 import './darkMode.css'
-import {ToggleButtonFalse} from '../../ressources/TogglebuttonFalse'
-import {ToggleButtonTrue} from '../../ressources/TogglebuttonTrue'
+import { ToggleButtonFalse } from '../../ressources/TogglebuttonFalse'
+import { ToggleButtonTrue } from '../../ressources/TogglebuttonTrue'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export const DarkMode = () => {
 
@@ -12,11 +12,11 @@ export const DarkMode = () => {
   }
 
   return (
-    <button 
+    <button
       className='darkMode'
       onClick={handleClick}
-      >
-        {mode === false ? <ToggleButtonFalse/> : <ToggleButtonTrue/> }
+    >
+      {mode === false ? <ToggleButtonFalse /> : <ToggleButtonTrue />}
     </button>
   )
 }

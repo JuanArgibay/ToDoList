@@ -4,25 +4,25 @@ import { MenuNavCategories } from "../components/MenuNavCategories/MenuNavCatego
 import { AddNewTask } from "../components/AddNewTask/AddNewTask";
 import './home.css'
 import { DarkMode } from "../components/DarkMode/DarkMode";
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 export const Home = () => {
 
     const [date, setDate] = useState(new Date());
 
-  return (
+    return (
         <>
             <header className="home">
                 <h1>ListU</h1>
                 <DarkMode></DarkMode>
             </header>
             <main className="homeMain">
-                <Calendar date={date} setDate={setDate}/>
-                <MenuNavCategories/>
+                <Calendar date={date} setDate={setDate} />
+                <MenuNavCategories />
                 <HomeDailyTasks date={date}></HomeDailyTasks>
             </main>
-            <AddNewTask/>
+            <AddNewTask />
         </>
-  )
+    )
 }

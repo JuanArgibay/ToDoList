@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
-import { fixedOneDigitDay } from "../../helpers"
+import { oneDigit } from "../../helpers"
+import React from "react";
 
-export const CounterDaily = ({timesTamp, dailyTasks}) => {
-    
+export const CounterDaily = ({ timesTamp, dailyTasks }) => {
+
   const [completed, setCompleted] = useState(0);
 
-  useEffect(()=> {
+  useEffect(() => {
     let counter = 0;
-    dailyTasks.map(task => task.comp === "1"? 
-        counter +=1 
-        : null);
+    dailyTasks.map(task => task.comp === "1" ?
+      counter += 1
+      : null);
     setCompleted(counter);
-  },[dailyTasks])
-
-
+  }, [dailyTasks])
 
   return (
     <>
       <h2>{completed} finished tasks</h2>
-      <p>{fixedOneDigitDay(timesTamp.day)} / {timesTamp.month} / {timesTamp.year} </p>
+      <p>{oneDigit(timesTamp.day)} / {oneDigit(timesTamp.month)} / {timesTamp.year} </p>
     </>
   )
 }

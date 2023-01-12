@@ -38,7 +38,7 @@ export const postTask = async (task, idCategory) => {
              if(item.category.id === idCategory.toString()) item.category.tasks = alltasks;
              let category = item.category;
              copy.push({category});
-             return console.info('task created');;
+             return;
             }
             );
             saveLocalData(copy)            

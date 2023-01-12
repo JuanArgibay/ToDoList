@@ -3,6 +3,7 @@ import './App.css';
 import { TestComponent } from './components/testComponent/TestComponent';
 import { Category } from './pages/Category';
 import { Home } from './pages/Home';
+import React from 'react';
 
 function App() {
 

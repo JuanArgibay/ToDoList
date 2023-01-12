@@ -1,11 +1,11 @@
 
-export const fixedOneDigitDay = (day) => {
-    return day.toString()[1]? day : '0' + day;
+export const oneDigit = (digit) => {
+    return digit.toString().length === 1? '0' + digit.toString() : digit.toString(); 
 }
 
 export const takeDateTasks = (tasksArray, timesTamp) => {
     const daily = []
-    const dateInterface= (`${fixedOneDigitDay(timesTamp.day)}/${timesTamp.month}/${timesTamp.year}`)
+    const dateInterface= (`${oneDigit(timesTamp.day)}/${oneDigit(timesTamp.month)}/${timesTamp.year}`);
      tasksArray?.map (tasks => 
                         tasks.map(task => 
                             (task.date === dateInterface)? 
@@ -14,4 +14,4 @@ export const takeDateTasks = (tasksArray, timesTamp) => {
                             )
                     );
     return daily;
-}
+};

@@ -11,6 +11,5 @@ export const useInfo = () => {
         }
         getTotalInfo();
     }, [])
-    console.log(totalInfo);
     return { totalInfo }
 }

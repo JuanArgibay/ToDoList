@@ -1,22 +1,17 @@
-import './pop-up.css'
-import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import { AddIcon } from '../../ressources/AddIcon';
+import { useState } from "react";
 import { postCategory } from '../../services';
 import { v4 as uuidv4 } from 'uuid'
+import { Link, useNavigate } from "react-router-dom";
 
-export const PopUp = (args) => {
-  const [modal, setModal] = useState(false);
+export const TestComponent = () => {
   const icons = ['🌍','👩‍👩‍👦','💪','🏘️','🔖','🚖','📺','📼'];
   const [name, setName] = useState('');
   const [color, setColor] = useState('transparent');
   const [icon, setIcon] = useState(icons[0]);
- 
-  const toggle = () => setModal(!modal);
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    toggle();
     if (!name) return console.log('debes escribir almenos el nombre');
     const category = {
       "color": '#'+color,
@@ -25,19 +20,12 @@ export const PopUp = (args) => {
       "name": name,
       "tasks": [],
     }
-    postCategory({category});
-    window.location.reload();
+    postCategory({category})
+    navigate("/");
   }
 
   return (
-    <div>
-        <Button onClick={toggle}>
-          <AddIcon></AddIcon>
-        </Button>
-      <Modal isOpen={modal} toggle={toggle} {...args}>
-        <ModalHeader toggle={toggle}>Add new category</ModalHeader>
-        <ModalBody>
-          <form >
+    <form >
             <fieldset> 
               <label htmlFor='name'>Whrite a name</label>
               <input type='text' name='name' onChange={(e) => setName(e.target.value)}></input>
@@ -52,17 +40,14 @@ export const PopUp = (args) => {
               <label htmlFor='color'>Whrite the color</label>
               <input type='text' name='color' placeholder= 'Example: E1C516' onChange={(e) => setColor(e.target.value)}></input>
             </fieldset>
-                <Button color="primary" onClick={handleSubmit}>
-                Submit
-                </Button>{' '}
+                <Link onClick={handleSubmit}>
+                    submit 
+                </Link>
+                
               
-              <Button color="secondary" onClick={() => toggle}>
+              <Link to="/">
                 Cancel
-              </Button>
+              </Link>
           </form>    
-        </ModalBody>
-      </Modal>
-    </div>
-  );
+  )
 }
-
